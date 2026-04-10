@@ -1,0 +1,46 @@
+# 基础依赖
+numpy==1.24.3
+pandas==2.3.1
+PyYAML==6.0.2
+click==8.1.7
+
+# PDF解析
+PyMuPDF==1.24.1
+PyPDF2==3.0.1
+pdfplumber==0.10.3
+
+# 文本处理
+nltk==3.9.3
+spacy==3.5.2
+transformers==4.53.1
+sentence-transformers==2.7.0
+
+# 音频处理
+pydub==0.25.1
+librosa==0.11.0
+soundfile==0.13.1
+
+# 视频处理
+opencv-python==4.6.0.66
+moviepy==1.0.3
+ffmpeg-python==0.2.0
+
+# 机器学习
+torch==2.6.0+cu124
+torchaudio==2.6.0+cu124
+torchvision==0.21.0+cu124
+transformers==4.53.1
+
+# API客户端
+openai==2.14.0
+langchain==0.2.14
+langchain-openai==1.1.6
+
+# 工具库
+tqdm==4.67.1
+pillow==10.4.0
+requests==2.32.4
+
+# 其他
+pygments==2.19.2
+matplotlib==3.10.8

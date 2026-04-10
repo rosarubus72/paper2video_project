@@ -1,0 +1,123 @@
+# # 项目配置文件
+
+# # 模型配置
+# model:
+#   # 文本生成模型
+#   text_model: "gpt-4o-mini"
+#   # 语音生成模型
+#   tts_model: "openai"
+#   # 视频生成模型
+#   video_model: "multitalk"
+
+# # API配置
+# api:
+#   openai_api_key: "sk-4loFmou3wa7YFgM1GZ6v3keYpPnVu6oPFhb8PuSMWWF5l3zD"
+#   base_url: "https://api.openai.com/v1"
+
+# # 路径配置
+# paths:
+#   # 输入路径
+#   pdf_dir: "data/pdfs"
+#   # 输出路径
+#   output_dir: "data/outputs"
+#   # 模型路径
+#   model_dir: "data/models"
+#   # 临时文件路径
+#   temp_dir: "data/temp"
+
+# # 视频配置
+# video:
+#   # 视频时长（分钟）
+#   duration: 4
+#   # 视频分辨率
+#   resolution: "1280x720"
+#   # 帧率
+#   fps: 30
+#   # 编码
+#   codec: "libx264"
+
+# # 音频配置
+# audio:
+#   # 采样率
+#   sample_rate: 24000
+#   # 通道数
+#   channels: 2
+#   # 比特率
+#   bitrate: "128k"
+
+# # 人物配置
+# characters:
+#   # 角色1
+#   host:
+#     name: "主持人"
+#     voice: "zh-CN-YunxiNeural"
+#     image: "data/models/host.jpg"
+#   # 角色2
+#   expert:
+#     name: "专家"
+#     voice: "zh-CN-YunyangNeural"
+#     image: "data/models/expert.jpg"
+
+# # 剪辑配置
+# editing:
+#   # 单人镜头时长（秒）
+#   single_shot_duration: 5-10
+#   # 双人镜头时长（秒）
+#   double_shot_duration: 10-15
+#   # 图片展示时长（秒）
+#   image_duration: 8-12
+#   # 文字展示时长（秒）
+#   text_duration: 6-10
+
+# 模型配置
+model:
+  # 文本生成模型 - 改为 Qwen2.5-VL 模型标识
+  text_model: "Qwen2.5-7B-Instruct"
+  # 语音生成模型（保留原有，不影响LLM部分）
+  tts_model: "openai"
+  # 视频生成模型（保留原有）
+  video_model: "multitalk"
+  # 新增：Qwen2.5-VL 本地模型路径（和llm.py中model_path对应）
+  qwen_model_path: "/data/home/zdhs0059/.cache/huggingface/Qwen/Qwen2.5-7B-Instruct"
+  # 新增：指定Qwen使用的CUDA设备
+  qwen_device: "cuda:1"
+
+# 移除原API配置（或注释掉，因为不再使用openai api）
+# api:
+#   openai_api_key: "sk-4loFmou3wa7YFgM1GZ6v3keYpPnVu6oPFhb8PuSMWWF5l3zD"
+#   base_url: "https://api.openai.com/v1"
+
+# 路径配置（保留原有，按需调整）
+paths:
+  pdf_dir: "data/pdfs"
+  output_dir: "data/outputs"
+  model_dir: "data/models"
+  temp_dir: "data/temp"
+
+# 其余配置（video/audio/characters/editing）保持不变
+video:
+  duration: 4
+  resolution: "1280x720"
+  fps: 30
+  codec: "libx264"
+
+audio:
+  sample_rate: 24000
+  channels: 2
+  bitrate: "128k"
+
+characters:
+  host:
+    name: "主持人"
+    voice: "zh-CN-YunxiNeural"
+    image: "data/models/host.jpg"
+  expert:
+    name: "专家"
+    voice: "zh-CN-YunyangNeural"
+    image: "data/models/expert.jpg"
+
+editing:
+  single_shot_duration: 5-10
+  double_shot_duration: 10-15
+  image_duration: 8-12
+  text_duration: 6-10
