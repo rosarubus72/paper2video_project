@@ -11,7 +11,7 @@
 
 # # API配置
 # api:
-#   openai_api_key: "sk-4loFmou3wa7YFgM1GZ6v3keYpPnVu6oPFhb8PuSMWWF5l3zD"
+#   openai_api_key: "sk-"
 #   base_url: "https://api.openai.com/v1"
 
 # # 路径配置
@@ -84,7 +84,7 @@ model:
 
 # 移除原API配置（或注释掉，因为不再使用openai api）
 # api:
-#   openai_api_key: "sk-4loFmou3wa7YFgM1GZ6v3keYpPnVu6oPFhb8PuSMWWF5l3zD"
+#   openai_api_key: "sk-"
 #   base_url: "https://api.openai.com/v1"
 
 # 路径配置（保留原有，按需调整）
